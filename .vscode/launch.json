@@ -1,0 +1,82 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Node with single file name index.js",
+            "program": "${workspaceFolder}/index.js",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome into own Workspace",
+            "url": "http://localhost:3000/",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/src",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///*": "/*"
+            },
+            "runtimeExecutable": "/usr/bin/chromium",
+            "userDataDir": true,
+            "smartStep": true
+        },
+        {
+            //Close all Chrome browser
+            // Start up Attach Chrome
+            // Run in terminal: chromium --remote-debugging-port=9222
+            // It will detect it and attach to it.
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach Chrome",
+            "url": "http://localhost:3000/",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/src",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///*": "/*"
+            },
+            "disableNetworkCache": true,
+            "showAsyncStacks": true,
+            "smartStep": true
+        },
+        {
+            //Close all Chrome browser
+            // Start up Attach Chrome
+            // Run in terminal: chromium --remote-debugging-port=9222
+            // It will detect it and attach to it.
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach Chrome 9222",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/src",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///*": "/*"
+            },
+            "disableNetworkCache": true,
+            "showAsyncStacks": true,
+            "smartStep": true
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome close all Chrome first",
+            "url": "http://localhost:3000/",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/src",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///*": "/*"
+            },
+            "runtimeExecutable": "/usr/bin/chromium",
+            "userDataDir": false,
+            "smartStep": true
+        }
+    ]
+}
